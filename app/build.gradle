@@ -1,11 +1,11 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 27
     defaultConfig {
         applicationId "com.gs.eventmanager"
         minSdkVersion 21
-        targetSdkVersion 28
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -20,8 +20,22 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //support dependencies
     implementation 'com.android.support:appcompat-v7:27.1.1'
+
+    //constraint layout
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+
+    //firebase auth UI
+    implementation 'com.firebaseui:firebase-ui-auth:4.2.0'
+
+    // Required for Facebook login support
+    implementation 'com.facebook.android:facebook-android-sdk:4.32.0'
+
+    // Required for Twitter login support
+    implementation 'com.twitter.sdk.android:twitter-core:3.2.0'
+
+    //testing
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
